@@ -7,7 +7,7 @@
 
 Пройти курс https://geekbrains.ru/courses/74. 
 
-Полученный серфтикикат необходимо загрузить в папку этого репозитория **sutdents/d3310/courses/фамилия_имя/simple_django_web_project**. Инструкция о загрузке работы ниже.
+Полученный серфтикикат необходимо загрузить в папку этого репозитория **sutdents/d3310/courses/фамилия_имя/simple_django_web_project**. Инструкция о загрузке сертификата [тут](https://github.com/TonikX/ITMO_ICT_WebProgramming_2020-2021_d3310/blob/master/README.md#%D1%81%D0%B4%D0%B0%D1%87%D0%B0-%D1%80%D0%B0%D0%B1%D0%BE%D1%82).
 
 ## Практическая работа №2
 

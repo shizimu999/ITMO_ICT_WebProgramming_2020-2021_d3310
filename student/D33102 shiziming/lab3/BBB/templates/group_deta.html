@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>group_deta</title>
+</head>
+<body>
+<h2>{{group.Group_name}}</h2>
+<h2>Racer:</h2>
+{% for r in group.racer_set.all %}
+    <hr>
+    <li>Name : {{r.racer_name}}</li>
+    <li>Introduction : {{r.Introduction}} </li>
+    <li>rank : {{r.rank}}</li>
+    <h3>racing car : </h3>
+{% for rc in r.racing_car_set.all %}
+<li>{{forloop.counter}} : {{rc.Vehicle_type}} <button><a href='/No1/{{rc.id}}/'>Up</a></button></li>
+{% endfor %}
+    <button><a href="/updetaracer/{{r.id}}/">Updeta</a></button>
+    <button><a href="/deleracer/{{r.id}}/">Delet</a></button>
+    <hr>
+{% endfor %}
+
+<p><a href="/createracer/">createracer</a></p>
+<p><a href="/grouplist/">Get Back</a></p>
+</body>
+</html>

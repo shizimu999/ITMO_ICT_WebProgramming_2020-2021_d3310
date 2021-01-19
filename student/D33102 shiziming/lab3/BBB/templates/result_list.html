@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result Tabel</title>
+</head>
+<body>
+<div class="">
+<table style="width: 1500px;margin: auto">
+    <caption>result table</caption>
+
+    <tr>
+        <td width="300" height="80">Group_name</td>
+        <td width="300" height="80">racer_name</td>
+        <td width="300" height="80">Macth</td>
+        <td width="300" height="80">Ranking</td>
+        <td width="300" height="80">time_cost</td>
+        <td width="300" height="80">Add</td>
+        <td width="300" height="80">Updata</td>
+        <td width="300" height="80">Delet</td>
+    </tr>
+    {% for r in model2%}
+    <tr>
+        <td width="300" height="80">{{r.ID_racer.ID_group.Group_name}}</td>
+        <td width="300" height="80">{{r.ID_racer.racer_name}}</td>
+        <td width="300" height="80">{{r.ID_Match.id}}</td>
+        <td width="300" height="80">{{r.result}}</td>
+        <td width="300" height="80">{{r.time_cost}}</td>
+        <td width="300" height="80"><button><a href="/create/">add</a></button></td>
+        <td width="300" height="80"><button><a href="/up/{{ r.id }}/">Up</a></button></td>
+        <td width="300" height="80"><button><a href="/delete_result/{{r.id}}/">Del</a></button></td>
+    {% empty %}
+        <td colspan="6">None</td>
+        <td width="300" height="80"><button><a href="/create/">add</a></button></td>
+    {% endfor %}
+    </tr>
+</table>
+</div>
+</body>
+</html>
